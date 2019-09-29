@@ -38,7 +38,7 @@
 
 
 <script>
-const socket = new WebSocket("wss://deltacloud.azurewebsites.net/");
+const socket = new WebSocket("ws://deltacloud.azurewebsites.net/");
 
 socket.onmessage = function (event) {
     console.log(event.data);
