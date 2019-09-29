@@ -133,7 +133,7 @@ $(document).ready(() => {
   // 3. Find or create a cached device to hold the telemetry data
   // 4. Append the telemetry data
   // 5. Update the chart UI
-  webSocket.onmessage = function onMessage(message) {
+  socket.onmessage = function onMessage(message) {
     try {
       const messageData = JSON.parse(message.data);
       console.log(messageData);
