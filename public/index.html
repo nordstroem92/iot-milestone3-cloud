@@ -40,7 +40,7 @@
 <script>
 
 const protocol = document.location.protocol.startsWith('https') ? 'wss://' : 'ws://';
-const socket = new WebSocket(protocol + "deltacloud.azurewebsites.net");
+const socket = new WebSocket(protocol + "https://deltacloud.azurewebsites.net");
 
 socket.onmessage = function (event) {
     console.log(event.data);
