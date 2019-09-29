@@ -3,7 +3,8 @@
 /* eslint-disable no-undef */
 $(document).ready(() => {
   // if deployed to a site supporting SSL, use wss://
-  const webSocket = new WebSocket("wss://deltacloud.azurewebsites.net/");
+  const protocol = document.location.protocol.startsWith('https') ? 'wss://' : 'ws://';
+  const socket = new WebSocket(protocol + "location.host");
 
   // A class for holding the last N points of telemetry for a device
   class DeviceData {
