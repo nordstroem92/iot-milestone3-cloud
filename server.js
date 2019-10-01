@@ -40,6 +40,22 @@ wss.broadcast = (data) => {
   });
 };
 
+
+$("#btn-green").click(function(){
+  console.log("clicked");
+  socket.send(3);
+});
+
+$("#btn-yellow").click(function(){
+  console.log("clicked");
+  socket.send(1);
+});
+
+$("#btn-blue").click(function(){
+  console.log("clicked");
+  socket.send(2);
+});
+
 server.listen(process.env.PORT || '3000', () => {
   console.log('Listening on %d.', server.address().port);
 });
