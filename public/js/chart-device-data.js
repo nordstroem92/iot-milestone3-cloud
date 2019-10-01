@@ -134,22 +134,6 @@ $(document).ready(() => {
   // 4. Append the telemetry data
   // 5. Update the chart UI
 
-  $("#btn-green").click(function(){
-    console.log("clicked");
-    socket.send(3);
-  });
-
-  $("#btn-yellow").click(function(){
-      console.log("clicked");
-      socket.send(1);
-  });
-
-  $("#btn-blue").click(function(){
-      console.log("clicked");
-      socket.send(2);
-  });
-
-
   socket.onmessage = function onMessage(message) {
     try {
       const messageData = JSON.parse(message.data);

@@ -21,8 +21,9 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 wss.on('connection', function (ws, req) {
-  console.log("hej");
+  console.log("hej din lille gnu");
   ws.on("message", function (data){
+    console.log("hej din fede laks");
     CloudToDeviceMessages(data); //2 blue 1 yellow 3 green
   });
 });

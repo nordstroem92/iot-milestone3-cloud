@@ -38,7 +38,6 @@
 
 
 <script>
-/**
 const protocol = document.location.protocol.startsWith('https') ? 'wss://' : 'ws://';
 const socket = new WebSocket(protocol + "deltacloud.azurewebsites.net");
 
@@ -64,7 +63,7 @@ $("#btn-blue").click(function(){
 socket.onerror = function (error) {
 console.log('An error occurred while trying to connect to a Websocket!');
 console.log(error);
-};*/
+};
 </script>
 </body>
 
