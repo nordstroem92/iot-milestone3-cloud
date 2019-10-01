@@ -21,7 +21,7 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 wss.on('connection', function (ws, req) {
-  console.log("test");
+  console.log("hej");
   ws.on("message", function (data){
     CloudToDeviceMessages(data); //2 blue 1 yellow 3 green
   });
